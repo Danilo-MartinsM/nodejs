@@ -28,4 +28,4 @@ const servidor = http.createServer((req, res) => {
 });
 servidor.listen(pseudoRandomBytes, () => {
     console.log('Servidor rodando em http://localhost:'+ porta +'/');
-})
+});
