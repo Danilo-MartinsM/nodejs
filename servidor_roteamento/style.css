@@ -9,7 +9,7 @@ body{
     align-items: center;
     min-height: 100vh;
 }
-.container {
+main.container {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -18,11 +18,11 @@ body{
     max-width: 600px;
     text-align: center;
 }
-.titulo{
+main.titulo{
     color: #333;
     margin-bottom: 20px;
 }
-.paragrafo{
+main.paragrafo{
     color: #666;
     line-height: 1.6;
 }
