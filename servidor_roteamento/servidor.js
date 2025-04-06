@@ -14,7 +14,7 @@ const servidor = http.createServer((req, res) => {
     fs.readFile(caminhoArquivo, (erro, conteudo) => {
         if (erro) {
             if (erro.code === 'ENOENT') {
-                res.writeHead(404, {'Content/Type' : 'text/plain'});
+                res.writeHead(404, {'Content-Type' : 'text/plain'});
                 res.end('Arquivo não encontrado')
             } else {
                 res.writeHead(500, {'Content-Type' : 'text/plain'});
@@ -26,6 +26,8 @@ const servidor = http.createServer((req, res) => {
         }
     });
 });
-servidor.listen(pseudoRandomBytes, () => {
+const porta = 3000;
+
+servidor.listen(porta, () => {
     console.log('Servidor rodando em http://localhost:'+ porta +'/');
 });
