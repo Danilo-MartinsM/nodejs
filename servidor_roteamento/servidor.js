@@ -6,9 +6,9 @@ const servidor = http.createServer((req, res) => {
     let caminhoArquivo = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
     let tipoConteudo = 'text/html';
 
-    if (path.extname(caminhoArquivo) === '.js') {
+    if (path.extname(caminhoArquivo) === '.css') {
         tipoConteudo = 'text/css';
-    } else if (path.extname(caminhoArquivo) === '.css') {
+    } else if (path.extname(caminhoArquivo) === '.js') {
         tipoConteudo = 'text/javascript';
     }
     fs.readFile(caminhoArquivo, (erro, conteudo) => {
